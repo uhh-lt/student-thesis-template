@@ -1,0 +1,87 @@
+\documentclass[pdftex,a4paper,twoside,bigchapter,bibtotoc,11pt]{scrbook}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{csquotes}% recommended for biblatex
+\usepackage[authordate, bibencoding=utf8, natbib, backend=biber, maxbibnames=10, maxcitenames=2, block=space, firstinits=true, sorting=nyt]{biblatex-chicago}%terseinits=true
+\DeclareNameAlias{sortname}{last-first}
+\usepackage{lipsum}
+\usepackage{hyperref}
+
+\addbibresource{thesis.bib}
+
+\title{A Sample Thesis}
+\author{John Doe}
+\date{November 2017}
+\titlehead{A Thesis submitted for the degree of Bachelor of Science or Master of Science or Doctor of Philosophy}
+\publishers{School of Something\\University of Somewhere}
+
+\begin{document}
+\maketitle
+
+\chapter*{Affidavit}
+I wrote this thesis.
+
+\chapter*{Abstract}
+
+A brief summary of the project goes here.
+
+% A glossary and list of acronyms may go here
+% or may go in the back matter.
+
+\chapter*{Acknowledgements}
+
+I would like to thank someone.
+
+\frontmatter
+
+\tableofcontents
+
+\listoffigures
+
+\listoftables
+
+\mainmatter
+
+\part*{A Part}
+
+\chapter{A Chapter}
+\label{ch:intro}
+
+\section{A Section}
+
+\subsection{A Subsection}
+
+\subsubsection{A Subsubection}
+
+\lipsum[1]
+
+\paragraph{A paragraph}
+
+\lipsum[2]
+
+\subparagraph{A subparagraph}
+
+\lipsum[3]
+
+\chapter{Bla}
+%
+\citet{Aho:72} wrote something. 
+%
+And this is a fact \citep{Chandra:81}.
+
+\backmatter
+
+% A glossary and list of acronyms may go here
+% or may go in the front matter after the abstract.
+
+\nocite{*} % show all bibliography entries
+
+\printbibliography
+
+\appendix
+
+
+
+\end{document}
